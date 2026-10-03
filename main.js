@@ -11,7 +11,7 @@ document.querySelector("button").addEventListener("click", () => {
             const td = document.createElement('td')
             td.dataset.x = letters[x]
             td.dataset.y = y + 1
-            td.dataset.isFired = false 
+            td.dataset.isFired = false
             tr.append(td)
             row.push(td)
         }
@@ -22,12 +22,12 @@ document.querySelector("button").addEventListener("click", () => {
 })
 
 table.addEventListener("click", e => {
-    const td = e.target.closest("td");
-    if (!td) return;
+    const td = e.target.closest("td")
+    if (!td) return
 
-    if (td.dataset.isFired === "true") return;
+    if (td.dataset.isFired === "true") return
 
-    td.dataset.isFired = "true";
+    td.dataset.isFired = "true"
     const img = document.createElement('img')
     img.src = "./src/img/cross.png"
     e.target.append(img)
